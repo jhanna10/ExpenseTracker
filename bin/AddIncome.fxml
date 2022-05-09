@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.Menu?>
+<?import javafx.scene.control.MenuBar?>
+<?import javafx.scene.control.MenuItem?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="401.0" prefWidth="602.0" xmlns="http://javafx.com/javafx" xmlns:fx="http://javafx.com/fxml" fx:controller="AddIncomeController">
+   <children>
+      <Label layoutX="268.0" layoutY="49.0" text="Add Income" />
+      <Label layoutX="159.0" layoutY="105.0" text="Amount:" />
+      <TextField id="incomeAmount" fx:id="incomeAmount" layoutX="226.0" layoutY="101.0" />
+      <Label layoutX="157.0" layoutY="177.0" text="Category:" />
+      <ComboBox id="incomeCategory" fx:id="incomeCategory" layoutX="226.0" layoutY="173.0" prefWidth="150.0" />
+      <Button id="cancelBTN" cancelButton="true" layoutX="175.0" layoutY="257.0" mnemonicParsing="false" onAction="#switchToMain" text="Cancel" />
+      <Button id="okIncome" defaultButton="true" layoutX="382.0" layoutY="257.0" mnemonicParsing="false" onAction="#addIncome" text="Accept" />
+      <Label layoutX="159.0" layoutY="144.0" text="Description:" />
+      <TextField id="incomeDescription" fx:id="incomeDescription" layoutX="226.0" layoutY="140.0" text="Wages" />
+      <MenuBar layoutY="2.0" prefHeight="25.0" prefWidth="602.0">
+        <menus>
+          <Menu mnemonicParsing="false" text="File">
+            <items>
+              <MenuItem mnemonicParsing="false" onAction="#close" text="Close" />
+            </items>
+          </Menu>
+          <Menu mnemonicParsing="false" text="Edit">
+            <items>
+              <MenuItem mnemonicParsing="false" onAction="#addCategory" text="Add Category" />
+            </items>
+          </Menu>
+          <Menu mnemonicParsing="false" text="Help">
+            <items>
+              <MenuItem mnemonicParsing="false" text="About" />
+            </items>
+          </Menu>
+        </menus>
+      </MenuBar>
+   </children>
+</AnchorPane>
